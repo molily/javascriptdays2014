@@ -1,3 +1,6 @@
+(function () {
+'use strict';
+
 /* Model class */
 
 var Car = Backbone.Model.extend();
@@ -31,3 +34,5 @@ var carView = new CarView({
 /* Initial rendering */
 
 carView.render();
+
+})();

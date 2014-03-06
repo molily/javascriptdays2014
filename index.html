@@ -479,7 +479,8 @@ alert( cars.length ); // 3
 <script type="text/template">
 # View ohne Template
 
-<pre><code contenteditable class="javascript">var CarView = Backbone.View.extend({
+<pre><code contenteditable class="javascript" data-trim>
+var CarView = Backbone.View.extend({
   initialize: function () {
     // Überwache Model-Änderungen: Neu rendern
     this.listenTo(this.model, 'change', this.render);
@@ -667,8 +668,9 @@ match('cars', 'cars#index');
 match('cars/:id', 'cars#show');
 </code></pre>
 
-Pfad `/cars` – Controller `cars` – Action `index`
-
+- Pfad `/` – Controller `homepage` – Action `show`
+- Pfad `/cars` – Controller `cars` – Action `index`
+- Pfad `/cars/:id` – Controller `cars` – Action `show`
 </script>
 </section>
 
@@ -806,7 +808,7 @@ define(
 # Chaplin-Views
 
 - Vordefinierte `render`-Methode
-- Deklaratives Event-Handling:<br>`events` und  `listen`
+- Deklaratives Event-Handling:<br>`events` und `listen`
 - Optionen: `autoRender` und `container`
 - Subviews mit der `subview`-Methode
 </script>
